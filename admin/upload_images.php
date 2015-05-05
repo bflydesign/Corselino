@@ -60,7 +60,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST")
         <div id="container">
             <!-- logo -->
             <div id="logo">
-                <img src="../style/logo.png" alt="corselino" />
+                <img src="../css/logo.png" alt="corselino" />
             </div>
             <!-- content -->
             <div id="transparant" class="dark">

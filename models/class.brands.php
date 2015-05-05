@@ -1,5 +1,5 @@
 <?php
-include_once ROOTDIR . 'admin/include/functions.php';
+include_once 'admin/include/functions.php';
 
 class Brands {
         var $id;

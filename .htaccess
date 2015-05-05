@@ -1,7 +1,7 @@
-RewriteEngine On    # Turn on the rewriting engine
-RewriteRule     ^home/?$        index.php           [NC,L]
-RewriteRule     ^lingerie/?$    lingerie.php        [NC,L] 
-RewriteRule     ^badmode/?$     badmode.php         [NC,L] 
-RewriteRule     ^nachtmode/?$   nachtmode.php       [NC,L] 
-RewriteRule     ^heren/?$       heren.php           [NC,L]
-RewriteRule     ^contact/?$     contact.php         [NC,L]
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-l
+
+RewriteRule ^(.+)$ index.php?page=$1 [QSA,L]

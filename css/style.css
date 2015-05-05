@@ -1,14 +1,34 @@
 @import url(http://fonts.googleapis.com/css?family=Dosis);
-
-* {
-    margin: 0;
-    padding: 0;
-    outline: none;
+/* -- box model reset -- */
+html {
     box-sizing: border-box;
 }
-html { 
-    font-size: 100%; 
-    height: 100%; 
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+/* -- css reset -- */
+body, ul {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+}
+/* -- clearfix hack -- */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.clearfix {
+    display: block;
+}
+html[xmlns] .clearfix {
+    display: block;
+}
+* html .clearfix {
+    height: 1%;
 }
 body { 
     font-family: Verdana;
@@ -21,7 +41,7 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
-    body#home {
+    body#index {
         background-image: url('bg_01.jpg');
     }
     body#lingerie {
@@ -30,13 +50,13 @@ body {
     body#badmode {
         background-image: url('bg_03.jpg');
     }
-    #nachtmode {
+    body#nachtmode {
         background-image: url('bg_04.jpg');
     }
-    #heren {
+    body#heren {
         background-image: url('bg_05.jpg');
     }
-    #contact {
+    body#contact {
         background-image: url('bg_06.jpg');
     }
 a, a:hover, a:visited, a:active, a:focus {
@@ -70,7 +90,6 @@ a, a:hover, a:visited, a:active, a:focus {
 #transparant {
     z-index: 0;
     width: 1010px;
-    height: 600px;
     position: absolute;
     top: 60px;
     left: 190px;
@@ -89,7 +108,7 @@ CONTENT
 #wrapper {
     position: relative;
 }
-#content {
+main {
     max-width: 100%;
     background-color: #fff;
     text-align: center;
@@ -110,9 +129,7 @@ CONTENT
     padding: 20px;
 }
 #lingeriebox {
-    width: 720px;
-    position: absolute;
-    bottom: 10px;
+    margin:  auto;
 }
 .lingerie {
     display: inline-block;
@@ -158,33 +175,50 @@ SOCIALMEDIA BUTTONS
 /********************
 MENU & FOOTER
 ********************/
-#menu {
+nav {
     width: 100%;
     height: 40px;
+}
+nav ul li {
+    display: inline-block;
+    width: 16.2%;
+    border-right: 1px solid #000000;
+    text-align: center;
+}
+nav ul li:first-of-type {
+    border-left: 1px solid #000000;
+}
+nav ul li a {
+    text-transform: uppercase;
+    color: #303631;
+}
+nav ul li a:hover {
+    text-transform: uppercase;
+    color: darkslateblue;
 }
 footer {
     width: 100%;
     margin-top: 10px;
 }
-#menu ul li a, footer ul li{
+nav ul li a, footer ul li{
     text-transform: uppercase;
     color: #303631;
 }
-#menu ul li a {
+nav ul li a {
     font-size: 1.1em;
     font-weight: 900;
 }
 footer ul li {
     font-size: 0.8em;
 }
-#menu ul li.item, footer ul li.item {
+nav ul li.item, footer ul li.item {
     display: table-cell;
     height: 12px;
     width: 20%;  /* (100 / numItems)% */    
     text-align: center;    
     white-space: nowrap;
 }
-#menu ul li.item {
+nav ul li.item {
     border-right: 2px solid #303631;
     line-height: 24px;
 }
@@ -192,14 +226,14 @@ footer ul li.item {
     border-right: 1px solid #303631;
     line-height: 16px;
 }
-#menu ul li.first, footer ul li.first {
+nav ul li.first, footer ul li.first {
     display: table-cell;
     height: 12px;
     text-align: left;
     white-space: nowrap;
     padding-right: 20px;
 }
-#menu ul li.first {
+nav ul li.first {
     border-right: 2px solid #303631;
     line-height: 24px;
 }
@@ -207,14 +241,14 @@ footer ul li.first {
     border-right: 1px solid #303631;
     line-height: 16px;
 }
-#menu ul li.last, footer ul li.last {
+nav ul li.last, footer ul li.last {
     display: table-cell;
     height: 12px;
     text-align: right;
     white-space: nowrap;
     padding-left: 20px;
 }
-#menu ul li.last {
+nav ul li.last {
     line-height: 24px;
 }
 footer ul li.last {

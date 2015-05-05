@@ -8,43 +8,34 @@
     <meta name="robots" content="index, follow">
     <meta name="revisit-after" content="3 month">
 
-    <link rel="stylesheet" type="text/css" href="style/style.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+    <!-- fancybox -->
+    <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 
-    <title>Corselino - Lingerie Veurne - Home</title>
+    <title><?php print isset($title) ? $title : ''; ?> | Corselino Lingerie Veurne</title>
 </head>
-<body id="home">
+<body id="<?php print $page; ?>">
 <!-- container -->
 <div id="container">
     <!-- logo -->
     <div id="logo">
-        <img src="style/logo.png" alt="corselino" />
+        <img src="css/logo.png" alt="corselino lingerie veurne" />
     </div>
-    <!-- content -->
+    <!-- box -->
     <div id="transparant" class="light">
         <div id="wrapper">
             <!-- menu -->
-            <?php include 'views/navigation.master.php'; ?>
+            <?php include_once 'navigation.master.php'; ?>
 
             <!-- content -->
-            <?php include_once '$view'; ?>
-            <div id="content">
-                <div id="textfield">
-                    Welkom op onze website,
-                    <br /><br />
-                    onze winkel is gelegen in de Oostraat te Veurne. Corselino staat steeds klaar om u professioneel bij te staan bij het uitkiezen van de perfecte lingerie, badmode en nachtmode. Alsook de heren kunnen bij ons terecht voor een professionele uitleg.
-                    <br /><br />
-                    Aarzel niet en kom zeker even langs in onze leuke winkel,<br />
-                    tot dan ...
-                </div>
-                <div id="images">
-                    <img src="images/imgHome_1.jpg" alt="slide" class="frontimage" />
-                    <img src="images/imgHome_2.jpg" alt="slide" class="frontimage" />
-                </div>
-            </div>
-
-            <!-- footer -->
-            <?php include 'views/footer.master.php'; ?>
+            <main>
+                <?php include_once isset($view) ? $view : ''; ?>
+            </main>
         </div>
+        <!-- footer -->
+        <?php include_once 'footer.master.php'; ?>
     </div>
 
     <!-- social media -->
@@ -56,11 +47,36 @@
 </div>
 
 <!--SCRIPTS-->
+<!-- Add jQuery library -->
 <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script type="text/javascript" src="scripts.js"></script>
+<!-- Add mousewheel plugin (this is optional) -->
+<script type="text/javascript" src="fancybox/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+<!-- Add fancyBox -->
+<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(".fancybox").fancybox();
+    });
+</script>
+<script type="text/javascript" src="js/scripts.js"></script>
 <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 <script type="text/javascript">
     centerContainer();
+</script>
+
+<script type="text/javascript">
+    function reloadCaptcha() {
+        var img = document.getElementById('captcha'),
+            timestamp = new Date().getTime();
+        img.src = 'captcha/image.php?' + timestamp;
+    }
 </script>
 </body>
 </html>

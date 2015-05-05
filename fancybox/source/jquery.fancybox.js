@@ -1978,7 +1978,7 @@
 		if ( $.scrollbarWidth === undefined ) {
 			// http://benalman.com/projects/jquery-misc-plugins/#scrollbarwidth
 			$.scrollbarWidth = function() {
-				var parent = $('<div style="width:50px;height:50px;overflow:auto"><div/></div>').appendTo('body'),
+				var parent = $('<div css="width:50px;height:50px;overflow:auto"><div/></div>').appendTo('body'),
 					child  = parent.children(),
 					width  = child.innerWidth() - child.height( 99 ).innerWidth();
 
@@ -1990,7 +1990,7 @@
 
 		if ( $.support.fixedPosition === undefined ) {
 			$.support.fixedPosition = (function() {
-				var elem  = $('<div style="position:fixed;top:20px;"></div>').appendTo('body'),
+				var elem  = $('<div css="position:fixed;top:20px;"></div>').appendTo('body'),
 					fixed = ( elem[0].offsetTop === 20 || elem[0].offsetTop === 15 );
 
 				elem.remove();
@@ -2014,7 +2014,7 @@
 
 		H.removeClass('fancybox-lock-test');
 
-		$("<style type='text/css'>.fancybox-margin{margin-right:" + (w2 - w1) + "px;}</style>").appendTo("head");
+		$("<css type='text/css'>.fancybox-margin{margin-right:" + (w2 - w1) + "px;}</css>").appendTo("head");
 	});
 
 }(window, document, jQuery));
