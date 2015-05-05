@@ -1,0 +1,291 @@
+@import url(http://fonts.googleapis.com/css?family=Dosis);
+
+root { 
+    display: block;
+}
+* { 
+    margin: 0;
+    padding: 0;
+    outline: none; 
+}
+html { 
+    font-size: 100%; 
+    height: 100%; 
+}
+body { 
+    font-family: Verdana;
+    color: #303631;
+    font-size: 10pt;
+}
+a, a:hover, a:active, a:focus, a:visited {
+    text-decoration: none;
+    color: #000000;
+}
+h3 {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    color: darkolivegreen;
+}                
+.clear {
+    clear: both;
+}
+.hidden {
+    display: none;
+}
+#container {
+    width: 982px;
+    /*height: 440px;*/
+    position: relative;
+    margin-top: 50px;
+    left: 50%;
+    margin-left: -491px;
+}
+#logo {
+    z-index: 1;
+    height: 80px;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#transparant {
+    z-index: 0;
+    width: 760px;
+    /*height: 400px;*/
+    position: absolute;
+    top: 60px;
+    left: 190px;
+}
+.dark {
+}
+    .dark::after {
+        background-image: url('../style/transparantbg_grey.png');
+        opacity: 0.5;
+        content: ""; 
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+.light {
+}
+    .light::after {
+        background-image: url('../style/transparantbg_white.png');
+        opacity: 0.5;
+        content: ""; 
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+    }
+    
+/*******************
+CONTENT
+*******************/
+#wrapper {
+    margin: 20px;
+    position: relative;
+}
+#content {
+    /*height: 300px;*/
+    width: 720px;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+}
+#textfield {
+    padding: 20px;
+}
+
+/********************
+MENU & FOOTER
+********************/
+#menu {
+    width: 660px;
+    height: 40px;
+}
+#footer {
+    width: 100%;
+    margin-top: 10px;
+}
+#menu ul li a, #footer ul li {
+    text-transform: uppercase;
+    color: #303631;
+}
+#menu ul li a {
+    font-size: 1.1em;
+    font-weight: 600;
+}
+#footer ul li {
+    font-size: 0.8em;
+}
+#menu ul li.item {
+    display: inline-block;
+    height: 12px;
+    width: 150px;  /* (100 / numItems)% */
+    text-align: center;
+    white-space: nowrap;
+}
+#footer ul li.item {
+    display: table-cell;
+    height: 12px;
+    width: 20%;  /* (100 / numItems)% */
+    text-align: center;    
+    white-space: nowrap;
+}
+#menu ul li.item {
+    border-right: 2px solid #303631;
+    line-height: 24px;
+}
+#footer ul li.item {
+    border-right: 1px solid #303631;
+    line-height: 16px;
+}
+#menu ul li.first {
+        display: inline-block;
+        width: 160px;
+        height: 12px;
+        text-align: left;
+        white-space: nowrap;
+}
+#footer ul li.first {
+    display: table-cell;
+    height: 12px;
+    text-align: left;
+    white-space: nowrap;
+    padding-right: 20px;
+}
+#menu ul li.first {
+    border-right: 2px solid #303631;
+    line-height: 24px;
+}
+#footer ul li.first {
+    border-right: 1px solid #303631;
+    line-height: 16px;
+}
+#menu ul li.last {
+        display: inline-block;
+        width: 160px;
+        height: 12px;
+        text-align: right;
+        white-space: nowrap;
+} 
+#footer ul li.last {
+    display: table-cell;
+    height: 12px;
+    text-align: right;
+    white-space: nowrap;
+}
+#menu ul li.last {
+    line-height: 24px;
+}
+#footer ul li.last {
+    line-height: 16px;
+}
+
+/*******************
+FORM
+*******************/
+.formstyle {
+    /*height: 260px;*/
+    width: 100%;
+    font-family: 'Dosis';
+    font-size: 1.2em;
+    text-align: left;
+}
+.formstyle fieldset {
+    border: 1px solid #EEEEEE;
+    padding: 15px;
+    border-radius: 3px;
+}
+.formstyle legend {
+    border: 1px solid #EEEEEE;
+    color: #617797;
+    margin-bottom: 0 !important;
+    padding: 7px 10px;
+    font-weight: bold;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+.formstyle label {
+    display: inline-block;
+    float: left;
+    font-size: 1em;
+    height: 26px;
+    line-height: 26px;
+    width: 150px;
+    padding-top: 5px;
+}
+.formstyle input {
+    background: none repeat scroll 0 0 #F5F5F5;
+    border: 1px solid #CCCCCC;
+    color: #666666;
+    font-size: 1em;
+    margin: 5px 0;
+    padding: 5px;
+    width: 400px;
+    border-radius: 3px;
+}
+.formstyle textarea {
+    background: none repeat scroll 0 0 #F5F5F5;
+    border: 1px solid #CCCCCC;
+    color: #666666;
+    font-size: 1em;
+    margin: 5px 0;
+    padding: 5px;
+    width: 450px;
+    height: 75px;
+    border-radius: 3px;
+}
+.formstyle .button {
+    background-color: rgba(1, 139, 157, 1);
+    color: #fff;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    padding: 10px;
+    width: 100px;
+    -webkit-border-radius: 10px; 
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.formstyle .error {
+    border: 1px solid #973d3d; 
+    background: #f0bebe; 
+    color: #a35959;
+}
+.formstyle .error:focus { 
+    border: 1px solid #eee; 
+    color: #a35959; 
+}
+.formstyle #inputcaptcha {
+    float: left;
+    width: 50px;
+    text-align: right;
+    margin-right: 10px;
+}
+.formstyle .succes {
+    color: #2caa74;
+}
+.formstyle .fail {
+    color: #973d3d;
+}
+.formstyle a {
+    color: rgb(1, 139, 157);
+}
+#form {
+    float: left;
+}
+.imagelist {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid darkolivegreen;
+}
+.thumb {
+        height: 75px;
+        border: 1px solid darkolivegreen;
+        margin-right: 3px;
+}

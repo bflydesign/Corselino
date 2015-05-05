@@ -1,0 +1,310 @@
+@import url(http://fonts.googleapis.com/css?family=Dosis);
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+html { 
+    font-size: 100%; 
+    height: 100%; 
+}
+body { 
+    font-family: Verdana;
+    color: #303631;
+    font-size: 10pt;
+    background-repeat: no-repeat;
+    background-position: top left;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+    body#home {
+        background-image: url('bg_01.jpg');
+    }
+    body#lingerie {
+        background-image: url('bg_02.jpg');
+    }
+    body#badmode {
+        background-image: url('bg_03.jpg');
+    }
+    #nachtmode {
+        background-image: url('bg_04.jpg');
+    }
+    #heren {
+        background-image: url('bg_05.jpg');
+    }
+    #contact {
+        background-image: url('bg_06.jpg');
+    }
+a, a:hover, a:visited, a:active, a:focus {
+    text-decoration: none;
+    color: #000000;
+}
+.clear {
+    clear: both;
+}
+.hidden {
+    display: none;
+}
+#container {
+    width: 1200px;
+    height: 660px;
+    position: relative;
+    /*top: 50%;*/
+    left: 50%;
+    /*margin-top: -240px;*/
+    /*margin-left: -466px;*/   
+    margin-top: 1000px;
+}
+#logo {
+    z-index: 1;
+    height: 80px;
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;    
+}
+#transparant {
+    z-index: 0;
+    width: 1010px;
+    height: 600px;
+    position: absolute;
+    top: 60px;
+    left: 190px;
+    padding: 30px;
+}
+.dark {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.light {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+    
+/*******************
+CONTENT
+*******************/
+#wrapper {
+    position: relative;
+}
+#content {
+    max-width: 100%;
+    background-color: #fff;
+    text-align: center;
+    position: relative;
+    padding: 30px;
+}
+#map {
+    float: right;
+    height: 260px;
+    width: 170px;
+    background-color: #fff;
+    font-family: 'Dosis';
+    font-size: 1.2em;
+    padding: 20px;
+    text-align: center;
+}
+#textfield {
+    padding: 20px;
+}
+#lingeriebox {
+    width: 720px;
+    position: absolute;
+    bottom: 10px;
+}
+.lingerie {
+    display: inline-block;
+    width: 16%;
+    text-align: center;
+}
+.lingerie img {
+    width: 105px;
+}
+.frontimage {
+    width: 330px;
+}
+
+/*******************
+SOCIALMEDIA BUTTONS
+*******************/
+#socialmedia {
+    position: absolute;
+    right: 0;
+    top: 120px;
+}
+#socialmedia div.twitter {
+    height: 32px;
+    width: 32px;
+    background-image: url('socialmedia.png');
+    background-position: 32px 64px;
+    margin-bottom: 5px;
+}
+#socialmedia div.facebook {
+    height: 32px;
+    width: 32px;
+    background-image: url('socialmedia.png');
+    background-position: 0 0;
+    margin-bottom: 5px;
+}
+#socialmedia div.googleplus {
+    height: 32px;
+    width: 32px;
+    background-image: url('socialmedia.png');
+    background-position: 0 32px;
+}
+
+/********************
+MENU & FOOTER
+********************/
+#menu {
+    width: 100%;
+    height: 40px;
+}
+footer {
+    width: 100%;
+    margin-top: 10px;
+}
+#menu ul li a, footer ul li{
+    text-transform: uppercase;
+    color: #303631;
+}
+#menu ul li a {
+    font-size: 1.1em;
+    font-weight: 900;
+}
+footer ul li {
+    font-size: 0.8em;
+}
+#menu ul li.item, footer ul li.item {
+    display: table-cell;
+    height: 12px;
+    width: 20%;  /* (100 / numItems)% */    
+    text-align: center;    
+    white-space: nowrap;
+}
+#menu ul li.item {
+    border-right: 2px solid #303631;
+    line-height: 24px;
+}
+footer ul li.item {
+    border-right: 1px solid #303631;
+    line-height: 16px;
+}
+#menu ul li.first, footer ul li.first {
+    display: table-cell;
+    height: 12px;
+    text-align: left;
+    white-space: nowrap;
+    padding-right: 20px;
+}
+#menu ul li.first {
+    border-right: 2px solid #303631;
+    line-height: 24px;
+}
+footer ul li.first {
+    border-right: 1px solid #303631;
+    line-height: 16px;
+}
+#menu ul li.last, footer ul li.last {
+    display: table-cell;
+    height: 12px;
+    text-align: right;
+    white-space: nowrap;
+    padding-left: 20px;
+}
+#menu ul li.last {
+    line-height: 24px;
+}
+footer ul li.last {
+    line-height: 16px;
+}
+
+/*******************
+FORM
+*******************/
+.formstyle {
+    float: left;
+    height: 260px;
+    width: 460px;
+    font-family: 'Dosis';
+    font-size: 1.2em;
+    padding: 10px;
+    text-align: left;
+}
+
+.formstyle fieldset {
+    border: 1px solid #EEEEEE;
+    padding: 15px;
+    border-radius: 3px;
+}
+.formstyle legend {
+    border: 1px solid #EEEEEE;
+    color: #617797;
+    margin-bottom: 0 !important;
+    padding: 7px 10px;
+    font-weight: bold;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+.formstyle label {
+    display: inline-block;
+    float: left;
+    font-size: 1em;
+    height: 26px;
+    line-height: 26px;
+    width: 95px;
+    padding-top: 5px;
+}
+.formstyle input, .formstyle textarea, .formstyle select {
+    background: none repeat scroll 0 0 #F5F5F5;
+    border: 1px solid #CCCCCC;
+    color: #666666;
+    font-size: 1.2em;
+    margin: 5px 0;
+    padding: 5px;
+    width: 350px;
+    border-radius: 3px;
+    font-family: 'Dosis';
+}
+.formstyle textarea {
+    min-height: 100px;
+    resize: none;
+}
+.formstyle input:focus, .formstyle textarea:focus { 
+    border: 1px solid #eee;
+    color: #444; 
+    background: #fff; 
+}
+.formstyle .button {
+    border-radius: 10px;
+    background-color: #000;
+    color: #cccccc;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    padding: 10px;
+    width: 100px;
+    float: right;
+}
+.formstyle .error {
+    border: 1px solid #973d3d; 
+    background: #f0bebe; 
+    color: #a35959;
+}
+.formstyle .error:focus { 
+    border: 1px solid #eee; 
+    color: #a35959; 
+}
+.formstyle #inputcaptcha {
+    float: left;
+    width: 50px;
+    text-align: right;
+    margin-right: 10px;
+}
+.formstyle .succes {
+    color: #2caa74;
+}
+.formstyle .fail {
+    color: #973d3d;
+}
