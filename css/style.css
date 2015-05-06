@@ -89,7 +89,7 @@ a, a:hover, a:visited, a:active, a:focus {
 }
 #transparant {
     z-index: 0;
-    width: 1010px;
+    width: 978px;
     position: absolute;
     top: 60px;
     left: 190px;
@@ -115,16 +115,6 @@ main {
     position: relative;
     padding: 30px;
 }
-#map {
-    float: right;
-    height: 260px;
-    width: 170px;
-    background-color: #fff;
-    font-family: 'Dosis';
-    font-size: 1.2em;
-    padding: 20px;
-    text-align: center;
-}
 #textfield {
     padding: 20px;
 }
@@ -140,7 +130,7 @@ main {
     width: 105px;
 }
 .frontimage {
-    width: 330px;
+    width: 40%;
 }
 
 /*******************
@@ -149,7 +139,7 @@ SOCIALMEDIA BUTTONS
 #socialmedia {
     position: absolute;
     right: 0;
-    top: 120px;
+    top: 130px;
 }
 #socialmedia div.twitter {
     height: 32px;
@@ -191,6 +181,8 @@ nav ul li:first-of-type {
 nav ul li a {
     text-transform: uppercase;
     color: #303631;
+    font-size: 1.1em;
+    font-weight: 900;
 }
 nav ul li a:hover {
     text-transform: uppercase;
@@ -198,58 +190,43 @@ nav ul li a:hover {
 }
 footer {
     width: 100%;
-    margin-top: 10px;
+    margin-top: 20px;
 }
-nav ul li a, footer ul li{
+footer ul li {
     text-transform: uppercase;
     color: #303631;
-}
-nav ul li a {
-    font-size: 1.1em;
-    font-weight: 900;
 }
 footer ul li {
     font-size: 0.8em;
 }
-nav ul li.item, footer ul li.item {
+footer ul li.item {
     display: table-cell;
     height: 12px;
     width: 20%;  /* (100 / numItems)% */    
     text-align: center;    
     white-space: nowrap;
 }
-nav ul li.item {
-    border-right: 2px solid #303631;
-    line-height: 24px;
-}
 footer ul li.item {
     border-right: 1px solid #303631;
     line-height: 16px;
 }
-nav ul li.first, footer ul li.first {
+footer ul li.first {
     display: table-cell;
     height: 12px;
     text-align: left;
     white-space: nowrap;
     padding-right: 20px;
 }
-nav ul li.first {
-    border-right: 2px solid #303631;
-    line-height: 24px;
-}
 footer ul li.first {
     border-right: 1px solid #303631;
     line-height: 16px;
 }
-nav ul li.last, footer ul li.last {
+footer ul li.last {
     display: table-cell;
     height: 12px;
     text-align: right;
     white-space: nowrap;
     padding-left: 20px;
-}
-nav ul li.last {
-    line-height: 24px;
 }
 footer ul li.last {
     line-height: 16px;
@@ -258,22 +235,21 @@ footer ul li.last {
 /*******************
 FORM
 *******************/
-.formstyle {
+#contactform {
     float: left;
-    height: 260px;
-    width: 460px;
+    width: 50%;
     font-family: 'Dosis';
     font-size: 1.2em;
     padding: 10px;
     text-align: left;
 }
 
-.formstyle fieldset {
+#contactform fieldset {
     border: 1px solid #EEEEEE;
     padding: 15px;
     border-radius: 3px;
 }
-.formstyle legend {
+#contactform legend {
     border: 1px solid #EEEEEE;
     color: #617797;
     margin-bottom: 0 !important;
@@ -282,7 +258,7 @@ FORM
     border-radius: 3px;
     margin-left: 10px;
 }
-.formstyle label {
+#contactform label {
     display: inline-block;
     float: left;
     font-size: 1em;
@@ -291,7 +267,7 @@ FORM
     width: 95px;
     padding-top: 5px;
 }
-.formstyle input, .formstyle textarea, .formstyle select {
+#contactform input, #contactform textarea, #contactform select {
     background: none repeat scroll 0 0 #F5F5F5;
     border: 1px solid #CCCCCC;
     color: #666666;
@@ -302,16 +278,16 @@ FORM
     border-radius: 3px;
     font-family: 'Dosis';
 }
-.formstyle textarea {
+#contactform textarea {
     min-height: 100px;
     resize: none;
 }
-.formstyle input:focus, .formstyle textarea:focus { 
+#contactform input:focus, #contactform textarea:focus {
     border: 1px solid #eee;
     color: #444; 
     background: #fff; 
 }
-.formstyle .button {
+#contactform .button {
     border-radius: 10px;
     background-color: #000;
     color: #cccccc;
@@ -321,24 +297,38 @@ FORM
     width: 100px;
     float: right;
 }
-.formstyle .error {
+#contactform .error {
     border: 1px solid #973d3d; 
     background: #f0bebe; 
     color: #a35959;
 }
-.formstyle .error:focus { 
+#contactform .error:focus {
     border: 1px solid #eee; 
     color: #a35959; 
 }
-.formstyle #inputcaptcha {
+#contactform #inputcaptcha {
     float: left;
     width: 50px;
     text-align: right;
     margin-right: 10px;
 }
-.formstyle .succes {
+#contactform .succes {
     color: #2caa74;
 }
-.formstyle .fail {
+#contactform .fail {
     color: #973d3d;
+}
+
+/*******************
+MAP
+*******************/
+#info {
+    float: right;
+    height: 260px;
+    width: 50%;
+    background-color: #fff;
+    font-family: 'Dosis';
+    font-size: 1.2em;
+    padding: 20px;
+    text-align: center;
 }

@@ -1,6 +1,7 @@
 <?php
 // -- ROUTER FUNCTION -- //
-function router($page) {
+function router($page)
+{
     $router = array(
         "" => "index.controller.php",
         "index" => "index.controller.php",
@@ -16,4 +17,25 @@ function router($page) {
         return $router[$page];
     else
         return "error.php";
+}
+
+// -- IMAGE FUNCTION -- //
+function getImages($directory)
+{
+    //get all image files with a .jpg extension.
+    $images = glob("" . $directory . "*.jpg");
+
+    $imgs = array();
+    if (count($images) > 0) {
+        // create array
+        foreach ($images as $image) {
+            $imgs[] = "$image";
+        }
+        //shuffle array
+        shuffle($imgs);
+
+        //select first 20 images in randomized array
+        $imgs = array_slice($imgs, 0, 6);
+    }
+    return $imgs;
 }

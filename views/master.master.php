@@ -24,13 +24,13 @@
         <img src="css/logo.png" alt="corselino lingerie veurne" />
     </div>
     <!-- box -->
-    <div id="transparant" class="light">
+    <div id="transparant" class="<?php print isset($transparent) ? $transparent : 'light'; ?>">
         <div id="wrapper">
             <!-- menu -->
             <?php include_once 'navigation.master.php'; ?>
 
             <!-- content -->
-            <main>
+            <main class="clearfix">
                 <?php include_once isset($view) ? $view : ''; ?>
             </main>
         </div>

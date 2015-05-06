@@ -12,7 +12,7 @@ function resetForm() {
 $(document).ready(function() {    
     $("#confirm").on("click", function(e) {
         e.preventDefault();
-        $("#succesmessage").addClass('hidden');
+        $("#successmessage").addClass('hidden');
         $("#failmessage").addClass('hidden');
         
         //Check name
@@ -64,7 +64,7 @@ $(document).ready(function() {
                             success: function(data) {                    
                                 var result = $.trim(data);
                                 if (result == 'true') {
-                                    $("#succesmessage").removeClass('hidden');
+                                    $("#successmessage").removeClass('hidden');
                                     reloadCaptcha();
                                     resetForm();                                    
                                 } else if (result == 'false') {
