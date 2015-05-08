@@ -10,9 +10,9 @@
 
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
     <!-- fancybox -->
-    <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-    <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
-    <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 
     <title><?php print isset($title) ? $title : ''; ?> | Corselino Lingerie Veurne</title>
 </head>
@@ -21,7 +21,7 @@
 <div id="container">
     <!-- logo -->
     <div id="logo">
-        <img src="css/logo.png" alt="corselino lingerie veurne" />
+        <img src="/css/logo.png" alt="corselino lingerie veurne" />
     </div>
     <!-- box -->
     <div id="transparant" class="<?php print isset($transparent) ? $transparent : 'light'; ?>">
@@ -31,7 +31,7 @@
 
             <!-- content -->
             <main class="clearfix">
-                <?php include_once isset($view) ? $view : ''; ?>
+                <?php include isset($view) ? $view : ''; ?>
             </main>
         </div>
         <!-- footer -->
@@ -66,6 +66,7 @@
     });
 </script>
 <script type="text/javascript" src="js/scripts.js"></script>
+<script type="text/javascript" src="js/ajaxContactForm.js"></script>
 <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
 <script type="text/javascript">
     centerContainer();
@@ -75,7 +76,7 @@
     function reloadCaptcha() {
         var img = document.getElementById('captcha'),
             timestamp = new Date().getTime();
-        img.src = 'captcha/image.php?' + timestamp;
+        img.src = 'components/captcha/image.php?' + timestamp;
     }
 </script>
 </body>

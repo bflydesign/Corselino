@@ -69,6 +69,12 @@ a, a:hover, a:visited, a:active, a:focus {
 .hidden {
     display: none;
 }
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
 #container {
     width: 1200px;
     height: 660px;
@@ -96,7 +102,7 @@ a, a:hover, a:visited, a:active, a:focus {
     padding: 30px;
 }
 .dark {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 .light {
     background-color: rgba(255, 255, 255, 0.5);
@@ -118,8 +124,8 @@ main {
 #textfield {
     padding: 20px;
 }
-#lingeriebox {
-    margin:  auto;
+#imgList {
+    margin: 0 auto;
 }
 .lingerie {
     display: inline-block;
@@ -130,7 +136,8 @@ main {
     width: 105px;
 }
 .frontimage {
-    width: 40%;
+    width: 45%;
+    margin: 15px;
 }
 
 /*******************
