@@ -1,14 +1,4 @@
 <?php
-include_once '../remote.php';
-
-include_once ROOTDIR.'admin/include/functions.php';
-include_once ROOTDIR.'admin/classes/class.mail.php';
-include_once ROOTDIR.'admin/classes/class.login.php';
-include_once ROOTDIR.'admin/classes/class.user.php';
-include_once ROOTDIR.'admin/classes/class.brands.php';
-include_once ROOTDIR.'admin/classes/class.upload.php';
-
-
 if(isset($_GET['CallID']))
 {
     if ($_GET['CallID'] == 'Login')

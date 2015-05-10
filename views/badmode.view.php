@@ -2,7 +2,7 @@
     <p>Onze merken in badmode:</p>
     <br />
     <p>
-        <?php print isset($content) ? $content : ''; ?>
+        <?php print isset($brands) ? $brands->getContent() : ''; ?>
     </p>
     <br />
     <p>Hieronder ziet u alvast een greep uit onze collectie:</p>

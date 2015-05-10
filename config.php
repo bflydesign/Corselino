@@ -1,5 +1,5 @@
 <?php
-$config = array(
+$GLOBALS = array(
 
     // -- general
     'general' => array(
@@ -37,12 +37,25 @@ $config = array(
     ),
 
     // -- emailadres
-    'email' => 'info@ateliervq.be',
+    'email' => 'info@corselino.be',
 
     // -- site
-    'site' => 'http://www.ateliervq.be',
-    'site-short' => 'www.ateliervq.be',
+    'site' => 'http://www.corselino.be',
+    'site-short' => 'www.corselino.be',
 
     // -- facebookpagina
-    'fb' => 'https://www.facebook.com/ateliervq'
+    'fb' => 'https://www.facebook.com/corselino',
+
+    // -- database
+    'db' => array(
+        'host' => '192.168.0.10',
+        'user' => 'bflydesign',
+        'pw' => 'Bfly81mysql',
+        'name' => 'corselino_be'
+
+/*        'host' => 'corselino.be.mysql',
+        'user' => 'corselino_be',
+        'pw' => 'sqtwwLnU',
+        'name' => 'corselino_be'*/
+    )
 );

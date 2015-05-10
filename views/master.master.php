@@ -1,11 +1,12 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<?php header('Content-Type image/jpeg'); ?>
+<!DOCTYPE HTML>
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="description" content="Bij Corselino in Veurne vind je een ruim aanbod lingerie voor dames en heren, voor jou en oud." />
     <meta name="keywords" content="lingerie, veurne, ooststraat, corselino, nachtmode, badmode, heren, AUBADE, BARBARA, BJORN BORG, CALVIN KLEIN, CYELL, FELINA, CONTURELLE, CANAT, IMPREINTE, FERAUD, LOU MEY, REBECCA & BROS, TRIUMPH SHAPE" />
     <meta name="author" content="metatags generator">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="nofollow">
     <meta name="revisit-after" content="3 month">
 
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
@@ -14,7 +15,7 @@
     <link rel="stylesheet" href="/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
     <link rel="stylesheet" href="/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 
-    <title><?php print isset($title) ? $title : ''; ?> | Corselino Lingerie Veurne</title>
+    <title><?php print isset($title) ? $title : ''; ?> | <?php print $GLOBALS['general']['longName']; ?></title>
 </head>
 <body id="<?php print $page; ?>">
 <!-- container -->

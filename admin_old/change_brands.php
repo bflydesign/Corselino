@@ -95,7 +95,7 @@ include_once ROOTDIR.'admin/classes/class.brands.php';
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
         <script src="https://apis.google.com/js/plusone.js"></script>
         <script type="text/javascript" src="uploadify/jquery.uploadify.min.js"></script>
-        <script type="text/javascript" src="js/ajaxSaveBrands.js"> </script>
+        <script type="text/javascript" src="../js/ajaxSaveBrands.js"> </script>
         <script type="text/javascript" src="js/ajaxLogin.js"> </script>
     </body>
 </html>

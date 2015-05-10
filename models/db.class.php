@@ -134,7 +134,7 @@ class MysqliDb
     public static function giveNewDbConnection()
     {
         //return new MysqliDb("bflydesign.no-ip.org", "bflydesign", "Bfly81mysql", "ateliervq_be");
-        return new MysqliDb("corselino.be.mysql", "corselino_be", "wyBC8KXX", "corselino_be");
+        return new MysqliDb($GLOBALS['db']['host'], $GLOBALS['db']['user'], $GLOBALS['db']['pw'], $GLOBALS['db']['name']);
     }
 
     /**

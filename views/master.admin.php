@@ -8,14 +8,14 @@
     <meta name="author" content="">
 
     <?php if (isset($title)) { ?>
-        <title><?php print $config['general']['title'] ?> - <?php print $title; ?></title>
+        <title><?php print isset($title) ? $title : 'Dashboard'; ?> | <?php print $GLOBALS['general']['longName'] ?></title>
     <?php } ?>
 
     <!-- Bootstrap core CSS -->
-    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="./css/dashboard.css" rel="stylesheet">
+    <link href="/css/dashboard.css" rel="stylesheet">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -37,11 +37,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/welkom">Atelier VQ</a>
+            <a class="navbar-brand" href="/welkom"><?php print $GLOBALS['general']['shortName']; ?></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/welkom">Website</a></li>
+                <li><a href="/">Website</a></li>
                 <li><a href="#" id="logout">Uitloggen</a></li>
             </ul>
         </div>
@@ -52,31 +52,14 @@
     <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
             <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Paginabeheer</a></li>
-                <li><a href="/page/edit?p=welkom">Welkom</a></li>
-                <li><a href="/page/edit?p=over-ons">Over ons</a></li>
-                <li><a href="/page/edit?p=chef-aan-huis">Chef-aan-huis</a></li>
-                <li><a href="/page/edit?p=links">Links</a></li>
-                <li><a href="/page/edit?p=news">News (introtekst)</a></li>
-                <li><a href="/page/edit?p=contact">Contact</a></li>
+                <li class="active"><a href="#">Merken</a></li>
+                <li><a href="/admin/page/edit?p=welkom">Badmode</a></li>
+                <li><a href="/admin/page/edit?p=over-ons">Heren</a></li>
+                <li><a href="/admin/page/edit?p=chef-aan-huis">Lingerie</a></li>
+                <li><a href="/admin/page/edit?p=links">Nachtmode</a></li>
             </ul>
             <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Winkel</a></li>
-                <?php foreach (Page::getSubPages(3) as $subPage) { ?>
-                    <li>
-                        <a href="/page/edit?p=<?php print !isNullOrEmpty($subPage->getSlug()) ? $subPage->getSlug() : ''; ?>">
-                            <?php print !isNullOrEmpty($subPage->getTitle()) ? $subPage->getTitle() : ''; ?>
-                        </a>
-                    </li>
-                <?php } ?>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <li class="active"><a href="#">Nieuwsbeheer</a></li>
-                <li><a href="/news/add">Toevoegen</a></li>
-                <li><a href="/news/edit">Bewerken</a></li>
-            </ul>
-            <ul class="nav nav-sidebar">
-                <li class="active"><a href="/fileserver">Fileserver</a></li>
+                <li class="active"><a href="/admin/fileserver">Fileserver</a></li>
             </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
@@ -119,10 +102,7 @@
     $('#content').ckeditor();
 </script>
 
-<script src="/js/savePage.js"></script>
-<script src="/js/saveNews.js"></script>
-<script src="/js/deleteNews.js"></script>
-<script src="/js/login.js"></script>
+<script src="/js/ajaxLogin.js"></script>
 
 </body>
 </html>

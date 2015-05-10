@@ -15,11 +15,11 @@ class Authentication
 
             // If the user exists we check if the account is locked
             // from too many login attempts
-            if (LoginAttempts::checkBrute($userID) == true) {
+/*            if (LoginAttempts::checkBrute($userID) == true) {
                 // Account is locked
                 // Send an email to user saying their account is locked
                 return false;
-            } else {
+            } else {*/
                 // Check if the password in the database matches
                 // the password the user submitted.
                 if ($db_password == $password) {
@@ -42,7 +42,7 @@ class Authentication
                     $li->save();
                     return false;
                 }
-            }
+            //}
         } else {
             // No user exists.
             return false;

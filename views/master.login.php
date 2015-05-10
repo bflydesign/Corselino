@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl-BE">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Login | <?php print $config['general']['longName']; ?></title>
+    <title>Login | <?php print $GLOBALS['general']['longName']; ?></title>
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -103,7 +103,7 @@
 <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.1.47/jquery.form-validator.min.js"></script>
 <script src="/js/scripts.js"></script>
-<script src="/js/login.js"></script>
+<script src="/js/ajaxLogin.js"></script>
 
 </body>
 </html>

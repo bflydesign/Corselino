@@ -1,9 +1,7 @@
 <?php
 if (Authentication::login_check() == true) {
-    $title = 'dashboard';
-    $style = 'admin';
+    $title = 'Filemanager';
     $view = 'fileserver.view.php';
-    $master = 'admin';
 } else {
-    header('location: /dashboard');
+    header('location: /admin/dashboard');
 }

@@ -1,7 +1,7 @@
 <?php
 $title = 'Lingerie';
 $transparent = "light";
-$content = 'test'; //Brands::getPageContent('lingerie');
-$imgs = getImages('images/lingerie/');
+$brands = new Brands('lingerie');
+$imgs = getImages('upload/images/lingerie/');
 
 $view = 'lingerie.view.php';

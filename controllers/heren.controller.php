@@ -1,7 +1,7 @@
 <?php
 $title = 'Heren';
 $transparent = "light";
-$content = 'test'; //Brands::getPageContent('heren');
-$imgs = getImages('images/heren/');
+$brands = new Brands('heren');
+$imgs = getImages('upload/images/heren/');
 
 $view = 'heren.view.php';

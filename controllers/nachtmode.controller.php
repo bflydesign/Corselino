@@ -1,7 +1,7 @@
 <?php
 $title = 'Nachtmode';
 $transparent = "dark";
-$content = 'test'; //Brands::getPageContent('nachtmode');
-$imgs = getImages('images/nachtmode/');
+$brands = new Brands('nachtmode');
+$imgs = getImages('upload/images/nachtmode/');
 
 $view = 'nachtmode.view.php';
