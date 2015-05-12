@@ -35,6 +35,7 @@ body {
     color: #303631;
     font-size: 10pt;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-position: top left;
     -webkit-background-size: cover;
     -moz-background-size: cover;

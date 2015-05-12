@@ -1,4 +1,6 @@
 <?php
+use Intervention\Image\ImageManagerStatic as Image;
+
 // -- ROUTER FUNCTION -- //
 function router($page)
 {
@@ -94,7 +96,7 @@ function getImages($directory)
         //shuffle array
         shuffle($imgs);
 
-        //select first 20 images in randomized array
+        //select first x images in randomized array
         $imgs = array_slice($imgs, 0, 6);
     }
     return $imgs;
@@ -104,11 +106,22 @@ function showImages($images) {
     if (!empty($images)) {
         //display images
         foreach ($images as $img) {
-            $pathToThumb = str_replace("/upload/images", "/upload/images/thumbs", $img);
-            WideImage::loadFromFile($pathToThumb)->crop('center', 'center', 150, 100)->output('jpg', 100); ?>
+            $path_parts = pathinfo($img);
+            // -- info oorspronkelijke afbeelding
+            $imgName = $path_parts['basename'];
+            $imgPath = $path_parts['dirname'].'/'; // dirname geeft path zonder laatste /
+            // -- info thumbnail
+            $thumbName = 'fit_' . $imgName;
+            $thumbPath = $imgPath.'thumbs/';
+            if (!file_exists($thumbPath))
+                mkdir($thumbPath, 0777, true);
+            if (!file_exists($thumbPath.$thumbName)) {
+                Image::make($img)->fit(100, 150)->save($thumbPath.$thumbName);
+            }
+            ?>
             <div class="lingerie">
                 <a class="fancybox" rel="group" href="<?php print $img; ?>">
-                    <img src="" class="imglingerie"/>
+                    <img src="<?php print $thumbPath.$thumbName; ?>" class="imglingerie"/>
                 </a>
             </div>
         <?php
